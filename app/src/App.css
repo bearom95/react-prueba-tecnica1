@@ -1,0 +1,35 @@
+footer {
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+}
+footer .lettersdiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
+
+footer .logosdiv {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-top: 1rem;
+
+}
+
+footer .socialmediasdiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+footer img {
+  height: 2rem;
+  object-fit: contain;
+}
