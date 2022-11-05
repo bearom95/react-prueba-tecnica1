@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 
+import { Card } from '../components/Card';
 export const Peliculas = () => {
   const [shows, setShows] = useState([]);
   const [peliculas, setPeliculas] = useState([]);
@@ -15,12 +16,19 @@ export const Peliculas = () => {
     const getPelis = () => {
       const pelisfiltradas = shows.filter((show) => show.programType == 'movie');
       const pelisnuevas = pelisfiltradas.filter((peli) => peli.releaseYear >= 2010);
+      const pelisordenadas = pelisnuevas.sort((a, b) => {
+        if (a.title < b.title) {
+          return -1;
+        } else if (a.title > b.title) {
+          return +1;
+        } else if (a.title == b.title) {
+          return 0;
+        }
+      });
 
-      setPeliculas(pelisnuevas);
+      setPeliculas(pelisordenadas);
     };
-    /*     getData();
-     */ getPelis();
-    console.log('esto cuando se lanza???');
+    getPelis();
   }, [JSON.stringify(shows)]);
 
   return (
@@ -28,10 +36,7 @@ export const Peliculas = () => {
       <h1>Peliculas page</h1>
       <div className="allmovies">
         {peliculas.map((pelicula) => (
-          <div key={pelicula.title}>
-            <h2>{pelicula.title}</h2>
-            <img src={pelicula.images['Poster Art'].url} alt="movie poster" />
-          </div>
+          <Card key={pelicula.title} item={pelicula} />
         ))}
       </div>
     </div>

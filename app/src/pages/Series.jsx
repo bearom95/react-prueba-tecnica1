@@ -15,9 +15,18 @@ export const Series = () => {
     const getSeries = () => {
       const seriesfiltradas = shows.filter((show) => show.programType == 'series');
       const seriesnuevas = seriesfiltradas.filter((serie) => serie.releaseYear >= 2010);
+      const seriesordenadas = seriesnuevas.sort((a, b) => {
+        if (a.title < b.title) {
+          return -1;
+        } else if (a.title > b.title) {
+          return +1;
+        } else if (a.title == b.title) {
+          return 0;
+        }
+      });
 
-      setSeries(seriesnuevas);
-      console.log(seriesnuevas);
+      setSeries(seriesordenadas);
+      console.log(seriesordenadas);
     };
 
     getSeries();
@@ -30,7 +39,7 @@ export const Series = () => {
         {series.map((serie) => (
           <div key={serie.title}>
             <h2>{serie.title}</h2>
-            <img src={serie.images['Poster Art'].url} alt="serie poster" />
+            {/* <img src={serie.images['Poster Art'].url} alt="serie poster" /> */}
           </div>
         ))}
       </div>
