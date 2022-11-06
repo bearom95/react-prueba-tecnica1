@@ -2,10 +2,12 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 import { Card } from '../components/Card';
+import { Loading } from './Loading';
 
 export const Series = () => {
   const [shows, setShows] = useState([]);
   const [series, setSeries] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -13,7 +15,10 @@ export const Series = () => {
       const dataToJson = await data.json();
       setShows(dataToJson);
     };
-    getData();
+    setTimeout(() => {
+      getData();
+      setLoading(false);
+    }, 800);
     const getSeries = () => {
       const seriesfiltradas = shows.filter((show) => show.programType == 'series');
       const seriesnuevas = seriesfiltradas.filter((serie) => serie.releaseYear >= 2010);
@@ -27,21 +32,25 @@ export const Series = () => {
         }
       });
 
-      setSeries(seriesordenadas);
-      console.log(seriesordenadas);
+      const series20 = seriesordenadas.slice(1, 21);
+      setSeries(series20);
     };
 
     getSeries();
   }, [JSON.stringify(shows)]);
 
   return (
-    <div>
-      <h1>Series page</h1>
-      <div className="allseries">
-        {series.map((serie) => (
-          <Card key={serie.title} item={serie} />
-        ))}
-      </div>
+    <div className="seriespage">
+      <h1>Popular series</h1>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="allseries">
+          {series.map((serie) => (
+            <Card key={serie.title} item={serie} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

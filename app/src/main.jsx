@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { App } from './App';
 import { Home } from './pages/Home';
+import { Notfound } from './pages/Notfound';
 import { Peliculas } from './pages/Peliculas';
 import { Series } from './pages/Series';
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           <Route path="series" element={<Series />} />
           <Route path="peliculas" element={<Peliculas />} />
+          <Route path="*" element={<Notfound />} />
         </Route>
       </Routes>
     </BrowserRouter>

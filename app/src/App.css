@@ -48,20 +48,36 @@ header button:hover {
 main {
   min-height: 60vh;
 }
- 
+ .loadingtext {
+  padding: 0.5% 10%;
 
+ }
+.pelispage h1 {
+  background-color: #242020;
+  box-shadow: inset 0 0 1rem black;
+  color: whitesmoke;
+  padding: 0.5% 10%;
+  font-weight: 200;
+}
+.seriespage h1 {
+  background-color: #242020;
+  box-shadow: inset 0 0 1rem black;
+  color: whitesmoke;
+  padding: 0.5% 10%;
+  font-weight: 200;
+}
 .allmovies {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1% 10%;
 }
 
 .allseries {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 1% 10%;
 }
 
 footer {
@@ -74,6 +90,7 @@ footer {
   width: 100%;
   padding: 3% 7%;
 }
+
 footer .lettersdiv {
   display: flex;
   flex-wrap: wrap;
@@ -99,10 +116,19 @@ padding-top: 1rem;
 footer .socialmediasdiv {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 footer img {
   height: 2rem;
   object-fit: contain;
+}
+
+footer .storelogos {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 1.5rem;
 }

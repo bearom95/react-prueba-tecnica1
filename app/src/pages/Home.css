@@ -4,8 +4,10 @@
 
 .homediv h1{
     background-color: #1E1E1E;
-    padding: 1% 10%;
-    color: whitesmoke
+    box-shadow: inset 0 0 1rem black;
+    padding: 0.5% 10%;
+    color: whitesmoke;
+    font-weight: 200;
 }
 .buttonsdiv {
     padding: 2% 10%;

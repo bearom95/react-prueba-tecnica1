@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header>
       <NavLink to="/" className="logo">
-        Demo streaming
+        DEMO streaming
       </NavLink>
       <div className="logintrialdiv">
         <a href="..">Login</a>

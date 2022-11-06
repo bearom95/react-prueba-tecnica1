@@ -11,16 +11,18 @@ const ModalDivStyled = styled.div`
   background-color: rgb(36, 32, 32);
   width: 80vw;
   /*   max-height: 80vh; */
-  padding: 5%;
+  padding: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   color: whitesmoke;
+  box-shadow: inset 0 0 5rem black;
 
   button {
     font-size: 1.3rem;
     position: relative;
+    margin: 0 1rem;
     float: right;
     background-color: inherit;
     border: none;
