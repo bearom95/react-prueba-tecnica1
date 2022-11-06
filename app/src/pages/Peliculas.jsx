@@ -17,11 +17,11 @@ export const Peliculas = () => {
       const pelisfiltradas = shows.filter((show) => show.programType == 'movie');
       const pelisnuevas = pelisfiltradas.filter((peli) => peli.releaseYear >= 2010);
       const pelisordenadas = pelisnuevas.sort((a, b) => {
-        if (a.title < b.title) {
+        if (a.title.toLowerCase() < b.title.toLowerCase()) {
           return -1;
-        } else if (a.title > b.title) {
+        } else if (a.title.toLowerCase() > b.title.toLowerCase()) {
           return +1;
-        } else if (a.title == b.title) {
+        } else if (a.title.toLowerCase() == b.title.toLowerCase()) {
           return 0;
         }
       });

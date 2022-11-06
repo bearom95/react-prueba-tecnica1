@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { App } from './App';
-import { Detail } from './pages/Detail';
 import { Home } from './pages/Home';
 import { Peliculas } from './pages/Peliculas';
 import { Series } from './pages/Series';
@@ -18,7 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           <Route path="series" element={<Series />} />
           <Route path="peliculas" element={<Peliculas />} />
-          <Route path="detail" element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>

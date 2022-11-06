@@ -1,24 +1,92 @@
 
-main {
-  margin-bottom: 13rem;
+header {
+  padding: 1% 10%;
+  background-color: rgb(30, 127, 238);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
 }
 
+header a:hover {
+  text-shadow: 1px 1px 2px rgb(7, 7, 90);
+}
+
+header .logo {
+color:whitesmoke;
+font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+}
+
+header button {
+  background-color: rgb(36, 32, 32);
+  color:whitesmoke;
+  padding: 0.3rem;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
+}
+
+header button:hover {
+  background-color: rgb(88, 84, 84);
+ 
+}
+
+.logintrialdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center; 
+  gap: 1rem;
+  color: whitesmoke
+  
+}
+main {
+  min-height: 60vh;
+}
+ 
+
+.allmovies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.allseries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+}
 
 footer {
-  background-color: aquamarine;
+  background-color: rgb(36, 32, 32);
+  color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position:fixed;
   bottom: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 3% 7%;
 }
 footer .lettersdiv {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  
+  gap: 0.7rem;
+}
+.companylinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer .logosdiv {
@@ -26,7 +94,6 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 padding-top: 1rem;
-
 }
 
 footer .socialmediasdiv {

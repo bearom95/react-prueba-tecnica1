@@ -4,10 +4,15 @@ export const Footer = () => {
       <div className="lettersdiv">
         <section className="companylinks">
           <a href="..">Home</a>
+          <p>|</p>
           <a href="..">Terms and Conditions</a>
+          <p>|</p>
           <a href="..">Privacy Policy</a>
+          <p>|</p>
           <a href="..">Collection Statements</a>
+          <p>|</p>
           <a href="..">Help</a>
+          <p>|</p>
           <a href="..">Manage Account</a>
         </section>
         <p>Copyright 2016 DEMO Streaming. All Rights Reserved.</p>
