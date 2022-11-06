@@ -20,6 +20,7 @@ const ModalDivStyled = styled.div`
   box-shadow: inset 0 0 5rem black;
 
   button {
+    all: unset;
     font-size: 1.3rem;
     position: relative;
     margin: 0 1rem;
